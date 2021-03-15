@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+  dockerlambdatemplate:
+    image: dockerlambdatemplate
+    build:
+      context: .
+      dockerfile: deploy/dockerlambdatemplate.Dockerfile
+    volumes:
+      - ./src:/var/task/src
+      - ./configs:/var/task/configs
+      - ~/.aws:/root/.aws
+    stdin_open: true
+    tty: true
