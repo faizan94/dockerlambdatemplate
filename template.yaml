@@ -14,12 +14,12 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       PackageType: Image
-      Policies: AmazonRDSFullAccess
+      Role: '<your secret role>' # Add secret role here
       Events:
         DockerLambdaTemplate:
           Type: Schedule
           Properties:
-            Schedule: rate(5 minutes)
+            Schedule: rate(2 minutes)
     Metadata:
       Dockerfile: deploy/dockerlambdatemplate.Dockerfile
       DockerContext: .

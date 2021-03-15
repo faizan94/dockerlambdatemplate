@@ -1,0 +1,2 @@
+table: 'temp_data' # Use your table name here
+secret_name: '<secret-value>' # secret value
