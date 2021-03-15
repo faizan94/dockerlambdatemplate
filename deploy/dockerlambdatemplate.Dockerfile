@@ -11,6 +11,5 @@ COPY src/app.py ./
 COPY src ./src
 
 # Execute code
-# ENTRYPOINT ["python", "-m", "src"]
-ENTRYPOINT ["bash"]
-# CMD ["app.lambda_handler"]
+#ENTRYPOINT ["bash"]
+CMD ["app.lambda_handler"]
